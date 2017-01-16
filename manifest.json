@@ -1,0 +1,40 @@
+{
+	"manifest_version": 2,
+
+	"name": "IITJ GPRA Login Extension",
+	"options_page": "options.html",
+	"description": "This extension automatically logs into the watchguard",
+	"version": "1.0",
+
+	"browser_action": {
+		"defualt_title": "Log in to the Watchguard website",
+		"defualt_icon": "icon.png"
+		/*"default_popup": "popup.html"*/
+	},
+
+	"icons":{
+		"48": "icon.png"
+	},
+
+	"background":{
+		"scripts": ["js/background.js"],
+		"persistent": false
+	},
+
+	"content_scripts":[
+		{
+			"matches": ["https://10.0.1.254:4100/logon.shtml"],
+			"js": ["js/myscript.js"]
+		}
+	],
+
+	"permissions":[
+		"activeTab",
+		"tabs",
+		"storage",
+		"http://*/*",
+		"https://*/*",
+		"background",
+		"geolocation"
+	]
+}
