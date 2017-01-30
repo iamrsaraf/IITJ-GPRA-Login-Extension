@@ -22,6 +22,7 @@ chrome.browserAction.onClicked.addListener(function(tab){
 });
 
 function open(){
+	//chrome.tabs.create({url:"https://wwww.google.com"});
 	chrome.tabs.create({url:tablink});
 	console.log("Opened https://10.0.1.254:4100/logon.shtml");
 }
@@ -58,7 +59,7 @@ chrome.windows.onCreated.addListener(function(){
 	if(logged!=1){
 		perform();
 	}
-	
+
 })
 //setInterval(perform,interval);
 document.getElementById('Login')[0].addEventListener('click',perform);

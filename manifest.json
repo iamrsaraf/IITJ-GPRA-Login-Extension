@@ -24,7 +24,7 @@
 	"content_scripts":[
 		{
 			"matches": ["https://10.0.1.254:4100/logon.shtml"],
-			"js": ["js/myscript.js"]
+			"js": ["js/myscript.js","js/logout.js"]
 		}
 	],
 
