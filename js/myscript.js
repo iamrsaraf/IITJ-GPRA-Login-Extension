@@ -31,9 +31,15 @@ function retrieve(){
 
 function func(){
 	form.getElementsByTagName('input')[2].click();
-	window.open("https://www.google.com","_self");
+	//window.open("https://www.google.com","_self");
+	var x=Math.floor((Math.random() * 100) + 1);
+	//alert("value of x is "+x);
+	/*if(x%7!=0){
+
+	}*/
+
 }
 
 
 retrieve();
-setTimeout(func,10);
+setTimeout(func,20);
